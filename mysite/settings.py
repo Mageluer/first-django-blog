@@ -80,6 +80,16 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'djangogirls',
+#        'USER': 'mageluer',
+#        'PASSWORD': 'weiwowujiu',
+#        'HOST': 'localhost',
+#        'PORT': '',
+#    }
+#}
 
 
 # Password validation
@@ -120,3 +130,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+# When the login page is accessed directly, it will redirect a successful login to the top level index
+LOGIN_REDIRECT_URL = '/'
